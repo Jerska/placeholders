@@ -1,0 +1,20 @@
+{
+  "name": "placeholders",
+  "version": "1.0.0",
+  "description": "Generate placeholders using unsplash's API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jerska/placeholders.git"
+  },
+  "keywords": [
+    "placeholders",
+    "unsplash"
+  ],
+  "author": "Matthieu Dumont <jerska@live.fr>",
+  "homepage": "https://github.com/Jerska/placeholders#readme",
+  "license": "MIT"
+}
