@@ -25,7 +25,7 @@ export async function search(search_query, new_image_params = {}, png = false) {
   const author_name = photo.user.name;
   const author_link = photo.user.links.html;
   const link = 'https://unsplash.com/';
-  const image_url = new URL(photo.urls.medium);
+  const image_url = new URL(photo.urls.thumb);
   const image_params = new URLSearchParams(image_url.search);
   for (let [k, v] of Object.entries(new_image_params)) {
     image_params.set(k, v);
