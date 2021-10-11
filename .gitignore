@@ -1,6 +1,9 @@
 # Generic
 .DS_Store
 
+# Editor
+.exrc
+
 # Node
 /node_modules
 
