@@ -4,6 +4,4 @@ if (!UNSPLASH_ACCESS_KEY || UNSPLASH_ACCESS_KEY === 'FIXME') {
   throw new Error('Missing UNSPLASH_ACCESS_KEY');
 }
 
-module.exports = {
-  access_key: UNSPLASH_ACCESS_KEY,
-};
+export const access_key = UNSPLASH_ACCESS_KEY;

@@ -1,10 +1,8 @@
-if (process.env.NODE_ENV === 'development') {
-  require('dotenv').config();
-}
+import 'dotenv/config';
 
-const express = require('express');
+import express from 'express';
 
-const unsplash_credentials = require('./unsplash/credentials.js');
+import { search } from './unsplash/search.js';
 
 const PORT = parseInt(process.env.PORT || '3000', 10);
 const UNSPLASH_ACCESS_TOKEN = process.env.UNSPLASH_ACCESS_TOKEN;
