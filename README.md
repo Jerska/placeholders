@@ -7,10 +7,10 @@ Generate placeholders images using unsplash's API.
 ### tl;dr
 
 ```html
-<embed src="https://fixme/restaurant?w=200&h=200&fit=crop" />
+<embed src="https://img-placeholders.netlify.app/restaurant?w=200&h=200&fit=crop" />
 ```
 
-**Click here to test it out [https://fixme/restaurant?w=200&h=200&fit=crop](https://fixme/restaurant?w=200&h=200&fit=crop)**
+**Click here to test it out [https://img-placeholders.netlify.app/restaurant?w=200&h=200&fit=crop](https://img-placeholders.netlify.app/restaurant?w=200&h=200&fit=crop)**
 
 ### Detailed usage
 
