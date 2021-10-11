@@ -4,6 +4,7 @@
   "description": "Generate placeholders using unsplash's API",
   "main": "server.js",
   "scripts": {
+    "dev": "nodemon server.js",
     "start": "node server.js"
   },
   "repository": {
@@ -19,5 +20,8 @@
   "license": "MIT",
   "dependencies": {
     "express": "4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.13"
   }
 }
