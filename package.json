@@ -16,5 +16,8 @@
   ],
   "author": "Matthieu Dumont <jerska@live.fr>",
   "homepage": "https://github.com/Jerska/placeholders#readme",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
