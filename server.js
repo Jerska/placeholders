@@ -10,8 +10,17 @@ const UNSPLASH_SECRET_KEY = process.env.UNSPLASH_SECRET_KEY;
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.status(200).send('Success');
+app.get('/', async (req, res) => {
+  const new_image_params = req.query;
+  const body = await search('', new_image_params);
+  res.status(200).header('Content-Type', 'image/svg+xml').send(body);
+});
+
+app.get('/:search', async (req, res) => {
+  const search_query = req.params.search;
+  const new_image_params = req.query;
+  const body = await search(search_query, new_image_params);
+  res.status(200).header('Content-Type', 'image/svg+xml').send(body);
 });
 
 app.listen(PORT, () => {
