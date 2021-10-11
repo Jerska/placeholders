@@ -19,7 +19,6 @@ async function request(method, path, opts = {}) {
     ...opts,
   });
   const body = await res.text();
-  console.log(res.headers, body);
   return JSON.parse(body);
 }
 
