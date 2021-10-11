@@ -19,3 +19,9 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
+
+process.on('unhandledRejection', (err) => {
+  console.error('Caught unhandled rejection:');
+  console.error(err);
+  process.exit(1);
+});
