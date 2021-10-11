@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <embed src="http://localhost:3000/?fit=crop&w=200&h=200" />
+  <head>
+    <style>
+      html {
+        margin: 0;
+        padding: 0;
+      }
+
+      html, body {
+        height: 100%;
+      }
+
+      code {
+        background: #ddd;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body style="text-align: center;">
+    Example page for a placeholder service using `Unsplash` images.<br />
+    Here's an example image with <a href="%%HOST%%/restaurant?fit=crop&w=200&h=200"></code>%%HOST%%/restaurant?fit=crop&w=200&h=200</code></a>.<br /><br />
+    <embed src="http://%%HOST%%/restaurant?fit=crop&w=200&h=200" />
   </body>
 </html>

@@ -1,5 +1,7 @@
 import 'dotenv/config';
 
+import { readFile } from 'fs/promises';
+
 import express from 'express';
 
 import { search } from './unsplash/search.js';
@@ -10,10 +12,16 @@ const UNSPLASH_SECRET_KEY = process.env.UNSPLASH_SECRET_KEY;
 
 const app = express();
 
+const filePromise = readFile('index.html');
+
+app.get('/favicon.ico', async (req, res) => {
+  res.status(404);
+});
+
 app.get('/', async (req, res) => {
-  const new_image_params = req.query;
-  const body = await search('', new_image_params);
-  res.status(200).header('Content-Type', 'image/svg+xml').send(body);
+  const body = (await filePromise).toString();
+  const bodyWithHost = body.replace(/%%HOST%%/g, req.headers.host);
+  res.status(200).header('Content-Type', 'text/html').send(bodyWithHost);
 });
 
 app.get('/:search', async (req, res) => {
