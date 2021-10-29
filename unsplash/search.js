@@ -16,6 +16,9 @@ export async function search(search_query, new_image_params = {}, png = false) {
     await setCache(full_path, res);
   }
 
+  const width = new_image_params.w ?? 200;
+  const height = new_image_params.h ?? 200;
+
   // Get random picture
   const idx = Math.floor(Math.random() * res.length);
   const photo = res[idx];
@@ -33,14 +36,14 @@ export async function search(search_query, new_image_params = {}, png = false) {
   image_url.search = `?${image_params.toString()}`;
   const safe_image_url = image_url.toString().replace(/&/g, '&amp;');
   return `
-      <svg version="1.1" width="200" height="200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      <svg version="1.1" width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         >
         <title>${search_query}</title>
         <image
           x="0"
           y="0"
-          width="200"
-          height="200"
+          width="${width}"
+          height="${height}"
           xlink:href=${JSON.stringify(safe_image_url)}
         >
           <title>
